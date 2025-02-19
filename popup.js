@@ -31,6 +31,37 @@ function deleteAllConversations() {
   return new Promise(async (resolve) => {
     let totalDeletedCount = 0;
 
+    // --- STEP 1: Open "Chat History" Menu ---
+    console.log(
+      'deleteAllConversations: Step 1 - Opening "Chat History" menu...'
+    );
+    const historyButtonSelector = 'button[aria-label="Chat history"]';
+    const historyButton = document.querySelector(historyButtonSelector);
+
+    if (historyButton) {
+      console.log(
+        'deleteAllConversations: "Chat History" button FOUND:',
+        historyButton
+      );
+      historyButton.click();
+      console.log('deleteAllConversations: "Chat History" button CLICKED.');
+      await new Promise((resolve) => setTimeout(resolve, 2000)); // Wait for history to load (adjust if needed)
+      console.log(
+        'deleteAllConversations: Waited for "Chat History" menu to load.'
+      );
+    } else {
+      console.warn(
+        'deleteAllConversations: "Chat History" button NOT FOUND! Aborting.'
+      );
+      document.getElementById('status').textContent =
+        'Error: "Chat History" button not found!';
+      return resolve(0); // Abort if history button is not found and resolve with 0 deleted count
+    }
+    console.log(
+      'deleteAllConversations: Step 1 - "Chat History" menu opened successfully.'
+    );
+    // --- End of Step 1 ---
+
     async function deleteVisibleConversations() {
       const conversationLinksSelector =
         'a.css-175oi2r.r-10sqg0u.r-1ny4l3l.r-1loqt21[role="link"][href^="/i/grok?conversation="]';
