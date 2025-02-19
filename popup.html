@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Grok Conversation Deleter</title>
+  <style>
+    body {
+      width: 250px;
+      padding: 10px;
+      font-family: sans-serif;
+    }
+
+    button {
+      cursor: pointer;
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    button:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+
+    #status {
+      margin-top: 10px;
+      font-size: 12px;
+    }
+
+    .spinner {
+      display: none;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Grok Deleter</h1>
+  <button id="deleteButton">Delete Conversations</button>
+  <div id="status"></div>
+  <div class="spinner">Loading...</div>
+  <script src="popup.js"></script>
+</body>
+
+</html>
