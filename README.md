@@ -36,20 +36,6 @@ Take control of your Grok chat logs and clear your history easily.  This extensi
 *   **Potential for Breakage:** Be aware that future updates to the Grok website are likely to break this extension. You may need to update the extension code if Grok changes their website structure.
 *   **Rate Limiting:**  While delays are built into the extension, deleting a very large conversation history rapidly *might* trigger rate limiting or other anti-automation measures by Grok. Use with reasonable delays and be mindful of potential issues if deleting extremely large histories.
 
-**Contributing:**
-
-Contributions to improve this extension are welcome! If you find bugs, have feature requests, or want to contribute code improvements, please:
-
-*   **Report Issues:**  Open an issue on this GitHub repository to report bugs or suggest features.
-*   **Pull Requests:**  Fork this repository, make your changes in a branch, and submit a pull request with your proposed changes.
-
-**License:**
-
-This project is licensed under the [MIT License](LICENSE). See the `LICENSE` file for details.
-
-**Support:**
-
-For questions, issues, or feedback, please open an issue on this GitHub repository.
 
 ---
 
